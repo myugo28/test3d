@@ -34,14 +34,133 @@ interface Data {
 }
 
 const Box3D: React.FC<{ box: Box }> = ({ box }) => {
+  // Calculate dimensions based on rotation
+  const getDimensions = () => {
+    const { x, y, z } = box.rotation;
+    let length = box.length;
+    let width = box.width;
+    let height = box.height;
+
+    // Handle 90-degree rotations
+    if (x === 90 || x === 270) {
+      [width, height] = [height, width];
+    }
+    if (y === 90 || y === 270) {
+      [length, width] = [width, length];
+    }
+    if (z === 90 || z === 270) {
+      [length, height] = [height, length];
+    }
+
+    return { length, width, height };
+  };
+
+  const dimensions = getDimensions();
+
   return (
-    <mesh
-      position={[box.x + box.length / 2, box.y + box.height / 2, box.z + box.width / 2]}
+    <group
+      position={[box.x + dimensions.length / 2, box.y + dimensions.height / 2, box.z + dimensions.width / 2]}
       rotation={[box.rotation.x * Math.PI / 180, box.rotation.y * Math.PI / 180, box.rotation.z * Math.PI / 180]}
     >
-      <boxGeometry args={[box.length, box.height, box.width]} />
-      <meshStandardMaterial color={box.color} />
-    </mesh>
+      <mesh>
+        <boxGeometry args={[box.length, box.height, box.width]} />
+        <meshStandardMaterial color={box.color} transparent opacity={0.3} />
+      </mesh>
+      {/* Bottom grid */}
+      <Grid
+        position={[0, -dimensions.height / 2, 0]}
+        args={[dimensions.length, dimensions.width]}
+        cellSize={10}
+        cellThickness={0.5}
+        cellColor="#6f6f6f"
+        sectionSize={50}
+        sectionThickness={0.5}
+        sectionColor="#4a6f9e"
+        fadeDistance={400}
+        fadeStrength={1}
+        followCamera={false}
+        infiniteGrid={false}
+      />
+      {/* Top grid */}
+      <Grid
+        position={[0, dimensions.height / 2, 0]}
+        args={[dimensions.length, dimensions.width]}
+        cellSize={10}
+        cellThickness={0.5}
+        cellColor="#6f6f6f"
+        sectionSize={50}
+        sectionThickness={0.5}
+        sectionColor="#4a6f9e"
+        fadeDistance={400}
+        fadeStrength={1}
+        followCamera={false}
+        infiniteGrid={false}
+      />
+      {/* Front grid */}
+      <Grid
+        position={[0, 0, dimensions.width / 2]}
+        args={[dimensions.length, dimensions.height]}
+        cellSize={10}
+        cellThickness={0.5}
+        cellColor="#6f6f6f"
+        sectionSize={50}
+        sectionThickness={0.5}
+        sectionColor="#4a6f9e"
+        fadeDistance={400}
+        fadeStrength={1}
+        followCamera={false}
+        infiniteGrid={false}
+        rotation={[Math.PI / 2, 0, 0]}
+      />
+      {/* Back grid */}
+      <Grid
+        position={[0, 0, -dimensions.width / 2]}
+        args={[dimensions.length, dimensions.height]}
+        cellSize={10}
+        cellThickness={0.5}
+        cellColor="#6f6f6f"
+        sectionSize={50}
+        sectionThickness={0.5}
+        sectionColor="#4a6f9e"
+        fadeDistance={400}
+        fadeStrength={1}
+        followCamera={false}
+        infiniteGrid={false}
+        rotation={[Math.PI / 2, 0, 0]}
+      />
+      {/* Left grid */}
+      <Grid
+        position={[-dimensions.length / 2, 0, 0]}
+        args={[dimensions.width, dimensions.height]}
+        cellSize={10}
+        cellThickness={0.5}
+        cellColor="#6f6f6f"
+        sectionSize={50}
+        sectionThickness={0.5}
+        sectionColor="#4a6f9e"
+        fadeDistance={400}
+        fadeStrength={1}
+        followCamera={false}
+        infiniteGrid={false}
+        rotation={[Math.PI / 2, 0, Math.PI / 2]}
+      />
+      {/* Right grid */}
+      <Grid
+        position={[dimensions.length / 2, 0, 0]}
+        args={[dimensions.width, dimensions.height]}
+        cellSize={10}
+        cellThickness={0.5}
+        cellColor="#6f6f6f"
+        sectionSize={50}
+        sectionThickness={0.5}
+        sectionColor="#4a6f9e"
+        fadeDistance={400}
+        fadeStrength={1}
+        followCamera={false}
+        infiniteGrid={false}
+        rotation={[Math.PI / 2, 0, Math.PI / 2]}
+      />
+    </group>
   );
 };
 
