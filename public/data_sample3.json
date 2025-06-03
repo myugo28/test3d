@@ -1,0 +1,75 @@
+{
+  "container": {
+    "id": "container1",
+    "length": 200,
+    "width": 200,
+    "height": 200,
+    "color": "#d3d3d3",
+    "boxes": [
+      {
+        "id": "box1",
+        "name": "Box 1",
+        "length": 120,
+        "width": 80,
+        "height": 60,
+        "x": 40,
+        "y": 0,
+        "z": 40,
+        "color": "#ff9a8b",
+        "rotation": {
+          "x": 0,
+          "y": 90,
+          "z": 0
+        }
+      },
+      {
+        "id": "box2",
+        "name": "Box 2",
+        "length": 100,
+        "width": 60,
+        "height": 80,
+        "x": 40,
+        "y": 0,
+        "z": 120,
+        "color": "#a8e6cf",
+        "rotation": {
+          "x": 90,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "id": "box3",
+        "name": "Box 3",
+        "length": 80,
+        "width": 80,
+        "height": 80,
+        "x": 120,
+        "y": 0,
+        "z": 40,
+        "color": "#dcedc1",
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 90
+        }
+      },
+      {
+        "id": "box4",
+        "name": "Box 4",
+        "length": 60,
+        "width": 60,
+        "height": 60,
+        "x": 120,
+        "y": 0,
+        "z": 120,
+        "color": "#ffd3b6",
+        "rotation": {
+          "x": 0,
+          "y": 270,
+          "z": 0
+        }
+      }
+    ]
+  }
+}

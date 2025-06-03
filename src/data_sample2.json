@@ -9,13 +9,29 @@
       {
         "id": "box-1",
         "name": "商品名1",
-        "length": 40,
-        "width": 30,
-        "height": 20,
+        "length": 50,
+        "width": 20,
+        "height": 30,
         "x": 0,
         "y": 0,
         "z": 0,
-        "color": "skyblue",
+        "color": "#00ff00",
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      },
+      {
+        "id": "box-2",
+        "name": "商品名2",
+        "length": 30,
+        "width": 20,
+        "height": 10,
+        "x": 0,
+        "y": 0,
+        "z": 30,
+        "color": "#ff0000",
         "rotation": {
           "x": 0,
           "y": 0,
