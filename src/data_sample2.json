@@ -1,0 +1,27 @@
+{
+  "container": {
+    "id": "container",
+    "length": 100,
+    "width": 80,
+    "height": 60,
+    "color": "lightgray",
+    "boxes": [
+      {
+        "id": "box-1",
+        "name": "商品名1",
+        "length": 40,
+        "width": 30,
+        "height": 20,
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "color": "skyblue",
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      }
+    ]
+  }
+}
