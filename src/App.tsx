@@ -61,7 +61,7 @@ const Container3D: React.FC<{ container: Container }> = ({ container }) => {
         cellColor="#6f6f6f"
         sectionSize={50}
         sectionThickness={0.5}
-        sectionColor="#4a4a6f"
+        sectionColor="#4a6f9e"
         fadeDistance={400}
         fadeStrength={1}
         followCamera={false}
@@ -76,7 +76,7 @@ const Container3D: React.FC<{ container: Container }> = ({ container }) => {
         cellColor="#6f6f6f"
         sectionSize={50}
         sectionThickness={0.5}
-        sectionColor="#4a4a6f"
+        sectionColor="#4a6f9e"
         fadeDistance={400}
         fadeStrength={1}
         followCamera={false}
@@ -91,7 +91,7 @@ const Container3D: React.FC<{ container: Container }> = ({ container }) => {
         cellColor="#6f6f6f"
         sectionSize={50}
         sectionThickness={0.5}
-        sectionColor="#4a4a6f"
+        sectionColor="#4a6f9e"
         fadeDistance={400}
         fadeStrength={1}
         followCamera={false}
@@ -107,7 +107,7 @@ const Container3D: React.FC<{ container: Container }> = ({ container }) => {
         cellColor="#6f6f6f"
         sectionSize={50}
         sectionThickness={0.5}
-        sectionColor="#4a4a6f"
+        sectionColor="#4a6f9e"
         fadeDistance={400}
         fadeStrength={1}
         followCamera={false}
@@ -123,7 +123,7 @@ const Container3D: React.FC<{ container: Container }> = ({ container }) => {
         cellColor="#6f6f6f"
         sectionSize={50}
         sectionThickness={0.5}
-        sectionColor="#4a4a6f"
+        sectionColor="#4a6f9e"
         fadeDistance={400}
         fadeStrength={1}
         followCamera={false}
@@ -139,13 +139,14 @@ const Container3D: React.FC<{ container: Container }> = ({ container }) => {
         cellColor="#6f6f6f"
         sectionSize={50}
         sectionThickness={0.5}
-        sectionColor="#4a4a6f"
+        sectionColor="#4a6f9e"
         fadeDistance={400}
         fadeStrength={1}
         followCamera={false}
         infiniteGrid={false}
         rotation={[Math.PI / 2, 0, Math.PI / 2]}
       />
+
       {container.boxes.map((box) => (
         <Box3D key={box.id} box={box} />
       ))}
