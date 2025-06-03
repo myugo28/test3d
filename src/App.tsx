@@ -1,4 +1,4 @@
-import { Grid, OrbitControls } from '@react-three/drei';
+import { Grid, OrbitControls, Text } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import React, { useEffect, useState } from 'react';
 import './App.css';
@@ -66,6 +66,19 @@ const Box3D: React.FC<{ box: Box }> = ({ box }) => {
         <boxGeometry args={[box.length, box.height, box.width]} />
         <meshStandardMaterial color={box.color} transparent opacity={0.3} />
       </mesh>
+
+      {/* Box name text - front */}
+      <Text
+        position={[0, 0, dimensions.width / 2 + 1]}
+        rotation={[0, 0, 0]}
+        fontSize={2}
+        color="#484848"
+        anchorX="center"
+        anchorY="middle"
+      >
+        {box.name}
+      </Text>
+
       {/* Bottom grid */}
       <Grid
         position={[0, 0, -dimensions.width / 2]}
