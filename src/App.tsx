@@ -60,8 +60,8 @@ const Container3D: React.FC<{ container: Container }> = ({ container }) => {
         cellThickness={0.5}
         cellColor="#6f6f6f"
         sectionSize={50}
-        sectionThickness={1}
-        sectionColor="#9d4b4b"
+        sectionThickness={0.5}
+        sectionColor="#4a4a6f"
         fadeDistance={400}
         fadeStrength={1}
         followCamera={false}
@@ -75,8 +75,8 @@ const Container3D: React.FC<{ container: Container }> = ({ container }) => {
         cellThickness={0.5}
         cellColor="#6f6f6f"
         sectionSize={50}
-        sectionThickness={1}
-        sectionColor="#9d4b4b"
+        sectionThickness={0.5}
+        sectionColor="#4a4a6f"
         fadeDistance={400}
         fadeStrength={1}
         followCamera={false}
@@ -90,8 +90,8 @@ const Container3D: React.FC<{ container: Container }> = ({ container }) => {
         cellThickness={0.5}
         cellColor="#6f6f6f"
         sectionSize={50}
-        sectionThickness={1}
-        sectionColor="#9d4b4b"
+        sectionThickness={0.5}
+        sectionColor="#4a4a6f"
         fadeDistance={400}
         fadeStrength={1}
         followCamera={false}
@@ -106,8 +106,8 @@ const Container3D: React.FC<{ container: Container }> = ({ container }) => {
         cellThickness={0.5}
         cellColor="#6f6f6f"
         sectionSize={50}
-        sectionThickness={1}
-        sectionColor="#9d4b4b"
+        sectionThickness={0.5}
+        sectionColor="#4a4a6f"
         fadeDistance={400}
         fadeStrength={1}
         followCamera={false}
@@ -122,8 +122,8 @@ const Container3D: React.FC<{ container: Container }> = ({ container }) => {
         cellThickness={0.5}
         cellColor="#6f6f6f"
         sectionSize={50}
-        sectionThickness={1}
-        sectionColor="#9d4b4b"
+        sectionThickness={0.5}
+        sectionColor="#4a4a6f"
         fadeDistance={400}
         fadeStrength={1}
         followCamera={false}
@@ -138,8 +138,8 @@ const Container3D: React.FC<{ container: Container }> = ({ container }) => {
         cellThickness={0.5}
         cellColor="#6f6f6f"
         sectionSize={50}
-        sectionThickness={1}
-        sectionColor="#9d4b4b"
+        sectionThickness={0.5}
+        sectionColor="#4a4a6f"
         fadeDistance={400}
         fadeStrength={1}
         followCamera={false}
